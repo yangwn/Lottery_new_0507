@@ -1,0 +1,8 @@
+<nav class="navbar navbar-fixed-top navbar-inverse startbootstrap-nav" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="">3D 杀码 <em>$!{killvalue}</em>
+            , 当前计算第 <em>$!{latestCycleNum}</em>
+            期, 上期奖号 <em>$!{latestWinnerCode}</em>
+        </a>
+    </div>
+</nav>

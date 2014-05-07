@@ -1,0 +1,57 @@
+#define($content)
+<div class="row-fluid">
+    <div class="col-lg-4">
+        <h4>
+            <button id="mergeKill" type="button" class="btn btn-danger" value="$killvalue">合并</button>
+            <button id="showkill" type="button" class="btn btn-primary" value="$killvalue">展开</button>
+        </h4>
+    </div>
+    <div class="col-lg-8">
+        <h4>
+            <button id="kill19" type="button" class="btn btn-danger kill" value="19">杀19</button>
+            <button id="kill28" type="button" class="btn btn-primary kill" value="28">杀28</button>
+            <button id="kill37" type="button" class="btn btn-success kill" value="37">杀37</button>
+            <button id="kill46" type="button" class="btn btn-info kill" value="46">杀46</button>
+            <button id="kill05" type="button" class="btn btn-warning kill" value="50">杀05</button>
+            <button id="allkill19" type="button" class="btn btn-danger allkill" value="19">通杀19</button>
+            <button id="allkill28" type="button" class="btn btn-primary allkill" value="28">通杀28</button>
+            <button id="allkill37" type="button" class="btn btn-success allkill" value="37">通杀37</button>
+            <button id="allkill46" type="button" class="btn btn-info allkill" value="46">通杀46</button>
+            <button id="allkill05" type="button" class="btn btn-warning allkill" value="50">通杀05</button>
+        </h4>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-lg-1">
+            <table class="table table-bordered">
+                <tbody>
+                    #foreach($winnerData in $allWinnerCode)
+                        <tr>
+                            <td class="pale">$velocityCount</td>
+                            #foreach($winnerCode in $winnerData)
+                                <td>$winnerCode</td>
+                            #end
+                        </tr>
+                    #end
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-11">
+            <div class="col-lg-2">
+                <table class="table table-bordered">
+                    <tbody>
+                        #foreach ($mergeData in $mergeDatas)
+                            <tr>
+                                #foreach($data in $mergeData)
+                                    <td class="$showColor.getColor($data)">$data</td>
+                                #end
+                            </tr>
+                        #end
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+#end
